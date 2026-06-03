@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scholarship Results</title>
+    <title>ScholarAI Results</title>
 </head>
 <body>
 
-    <h1>ScholarAI Results</h1>
+    <h1>ScholarAI Recommendations</h1>
 
-    <h3>Student Information</h3>
+    <h3>Student Profile</h3>
 
     <p>Name: {{ student.name }}</p>
     <p>Degree: {{ student.degree }}</p>
     <p>Year: {{ student.year }}</p>
-    <p>Income: {{ student.income }}</p>
+
+    <hr>
+
+    <h2>Recommended Scholarships</h2>
+
+    <pre>{{ recommendations }}</pre>
 
 </body>
 </html>
