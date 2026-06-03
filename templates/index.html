@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarAI</title>
+</head>
+<body>
+
+    <h1>ScholarAI</h1>
+    <h2>AI-Powered Scholarship Navigator</h2>
+
+    <p>
+        Discover scholarships tailored to your profile using Google Gemini AI.
+    </p>
+
+    <form action="/recommend" method="POST">
+
+    <input type="text" name="name" placeholder="Full Name" required>
+
+    <input type="email" name="email" placeholder="Email" required>
+
+    <select name="degree">
+        <option>B.Tech</option>
+        <option>B.Sc</option>
+        <option>BCA</option>
+        <option>M.Tech</option>
+        <option>MCA</option>
+    </select>
+
+    <select name="year">
+        <option>1st Year</option>
+        <option>2nd Year</option>
+        <option>3rd Year</option>
+        <option>4th Year</option>
+    </select>
+
+    <input type="number" name="income" placeholder="Annual Family Income">
+
+    <button type="submit">
+        Find Scholarships
+    </button>
+
+</form>
+
+</body>
+</html>
