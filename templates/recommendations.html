@@ -1,25 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScholarAI Results</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-    <h1>ScholarAI Recommendations</h1>
+{% block content %}
 
-    <h3>Student Profile</h3>
+<div class="container py-5">
+    <a href="/" class="btn btn-outline-primary mb-3">
+    ← Search Again
+</a>
 
-    <p>Name: {{ student.name }}</p>
-    <p>Degree: {{ student.degree }}</p>
-    <p>Year: {{ student.year }}</p>
+    <div class="text-center mb-4">
 
-    <hr>
+    <h1 class="brand-title">
+        Your Scholarship Matches
+    </h1>
 
-    <h2>Recommended Scholarships</h2>
+    <p class="text-muted">
+        Personalized recommendations generated using Gemini AI
+    </p>
 
-    <pre>{{ recommendations }}</pre>
+</div>
 
-</body>
-</html>
+    <div class="card shadow-sm mb-4">
+
+    <div class="card-body">
+
+        <h4 class="mb-3">🎓 Student Profile</h4>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <strong>Name:</strong> {{ student.name }}
+            </div>
+
+            <div class="col-md-4">
+                <strong>Degree:</strong> {{ student.degree }}
+            </div>
+
+            <div class="col-md-4">
+                <strong>Year:</strong> {{ student.year }}
+            </div>
+
+            <div class="col-md-4">
+                <strong>Gender:</strong> {{ student.gender }}
+            </div>
+            
+            <div class="col-md-4">
+                <strong>Language:</strong> {{ student.language }}
+            </div>
+            
+            <div class="col-md-4">
+                <strong>State:</strong> {{ student.state }}
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <strong>CGPA:</strong> {{ student.cgpa }}
+            </div>
+
+            <div class="col-md-4">
+                <strong>Category:</strong> {{ student.category }}
+            </div>
+
+            <div class="col-md-4">
+                <strong>Income:</strong> ₹{{ student.income }}
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="card shadow-lg mt-4 border-0">
+        <div class="card-body">
+
+            <span class="badge bg-success mb-3">
+    Gemini AI Generated
+</span>
+
+          <h3 class="mb-3">
+            🤖 AI Scholarship Recommendations
+          </h3>
+
+        <div style="white-space: pre-wrap;">
+            {{ recommendations }}
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+
+{% endblock %}

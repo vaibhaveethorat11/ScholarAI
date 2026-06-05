@@ -12,12 +12,16 @@ def home():
 def recommend():
 
     student_data = {
-        "name": request.form['name'],
-        "degree": request.form['degree'],
-        "year": request.form['year'],
-        "state": request.form['state'],
-        "income": request.form['income']
-    }
+    "name": request.form['name'],
+    "degree": request.form['degree'],
+    "year": request.form['year'],
+    "state": request.form['state'],
+    "cgpa": request.form['cgpa'],
+    "gender": request.form['gender'],
+    "category": request.form['category'],
+    "language": request.form['language'],
+    "income": request.form['income']
+}
 
     recommendations = get_scholarship_recommendations(student_data)
 

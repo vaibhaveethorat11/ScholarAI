@@ -1,0 +1,66 @@
+body{
+    background: linear-gradient(
+        135deg,
+        #f8f5ff,
+        #eef2ff
+    );
+    min-height:100vh;
+}
+
+/* Brand */
+
+.brand-title{
+    background: linear-gradient(
+        90deg,
+        #7c3aed,
+        #2563eb
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    font-weight:700;
+}
+
+/* Card */
+
+.card{
+    border:none;
+    border-radius:20px;
+}
+
+/* Button */
+
+.btn-ai{
+    background: linear-gradient(
+        90deg,
+        #7c3aed,
+        #2563eb
+    );
+
+    color:white;
+    border:none;
+    padding:12px;
+    font-weight:600;
+}
+
+.btn-ai:hover{
+    opacity:0.9;
+    color:white;
+}
+
+/* Hero */
+
+.hero-subtitle{
+    color:#6b7280;
+}
+
+/* Recommendations */
+
+.result-card{
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f6f0ff
+    );
+}

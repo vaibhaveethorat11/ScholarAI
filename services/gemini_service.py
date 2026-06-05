@@ -11,25 +11,44 @@ client = genai.Client(
 def get_scholarship_recommendations(student_data):
 
     prompt = f"""
-    You are an expert scholarship advisor for Indian students.
+    You are an expert scholarship advisor.
 
     Student Profile:
+
     Name: {student_data['name']}
     Degree: {student_data['degree']}
     Year: {student_data['year']}
     State: {student_data['state']}
     Family Income: {student_data['income']}
+    CGPA: {student_data['cgpa']}
+    Gender: {student_data['gender']}
+    Category: {student_data['category']}
+    Preferred Language: {student_data['language']}
 
-    Recommend 5 scholarships.
+    Recommend exactly 5 scholarships.
 
-    For each scholarship provide:
-    1. Scholarship Name
-    2. Why the student qualifies
-    3. Benefits
-    4. Required Documents
+Format each scholarship like this:
 
-    Keep the language simple and student-friendly.
-    """
+## Scholarship Name
+
+Match Percentage: XX%
+
+Why This Matches:
+- Point 1
+- Point 2
+
+Benefits:
+- Benefit
+
+Required Documents:
+- Document 1
+- Document 2
+
+Application Tips:
+- Tip
+
+    Use clear formatting.
+"""
 
     response = client.models.generate_content(
         model="gemini-2.5-flash",
